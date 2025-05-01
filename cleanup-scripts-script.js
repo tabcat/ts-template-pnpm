@@ -8,7 +8,7 @@ try {
   delete pkg.scripts['setup'];
   delete pkg.scripts['setup-install'];
   delete pkg.scripts['setup-workflows'];
-  delete pkg.scripts['setup-cleanup'];
+  delete pkg.scripts['setup-finish'];
   
   // Create temporary file with unique name
   const tempFile = `.package-${randomUUID()}.json.tmp`;
