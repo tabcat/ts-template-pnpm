@@ -1,7 +1,5 @@
 import fs from 'node:fs';
-import path from 'node:path';
 import { randomUUID } from 'node:crypto';
-import pkg from './package.json' with { type: 'json' };
 import { execSync } from 'node:child_process';
 
 const devDeps = [
@@ -44,6 +42,7 @@ try {
   console.log('Development dependencies installed successfully');
 
   /** remove setup script from package.json */
+  const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   delete pkg.scripts.setup
   const tempFile = `.package-${randomUUID()}.json.tmp`;
   fs.writeFileSync(tempFile, JSON.stringify(pkg, null, 2) + '\n');
