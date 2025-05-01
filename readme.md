@@ -4,7 +4,7 @@
 
 `pnpm run setup`
 
-installs the latest version of each packages included in the template. The script can then be deleted.
+The script source is at ./setup.js and will move `workflows` into `.github/workflows` and then install the devDeps.
 
 ### Add NPM_TOKEN to github secrets
 
@@ -12,6 +12,8 @@ For the publish workflow to work, you need to add your NPM token as a secret to 
 
 ### Enable Github Pages for Docs
 
-Repo Settings > Pages > Build and deployment > Github Actions
+`Repo Settings > Pages > Build and deployment > Github Actions`
 
-> Now just remove the setup* scripts from the package.json scripts field and done!
+This will let the pages workflow complete.
+
+> Done!
