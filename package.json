@@ -13,7 +13,8 @@
   "scripts": {
     "setup-workflows": "mkdir .github && cp -r workflows .github",
     "setup-install": "pnpm install -D typescript typedoc vitest prettier prettier-plugin-organize-imports husky lint-staged",
-    "setup": "pnpm setup-workflows && pnpm setup-install",
+    "setup-cleanup": "node cleanup-scripts-script.js",
+    "setup": "pnpm setup-workflows && pnpm setup-install && pnpm setup-cleanup",
     "lint": "prettier src test --check",
     "format": "prettier src test --write",
     "build": "tsc",
