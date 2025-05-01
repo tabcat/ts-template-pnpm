@@ -14,4 +14,4 @@ For the publish workflow to work, you need to add your NPM token as a secret to 
 
 Repo Settings > Pages > Build and deployment > Github Actions
 
-> Done!
+> Now just remove the setup* scripts from the package.json scripts field and done!
