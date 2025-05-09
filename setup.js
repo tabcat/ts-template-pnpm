@@ -17,21 +17,14 @@ try {
 
   /** setup GitHub workflows */
   console.log('Setting up GitHub workflows...');
-  try {
-    if (!fs.existsSync('.github')) {
-      fs.mkdirSync('.github');
-    }
-  } catch (e) {
-    console.error('Error creating .github directory:', e);
-  }
 
   try {
     if (!fs.existsSync('.github/workflows')) {
-      fs.cpSync('workflows', '.github/workflows', { recursive: true });
-      console.log('Workflows copied to .github directory');
+      fs.renameSync('workflows', '.github/workflows', { recursive: true });
+      console.log('Workflows moved to .github directory');
     }
   } catch (e) {
-    console.error('Error copying workflows to .github/workflows:', e);
+    console.error('Error moving workflows to .github/workflows:', e);
   }
 
   /** install devDependencies */
