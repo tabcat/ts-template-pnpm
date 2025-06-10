@@ -16,7 +16,7 @@
   "author": "tabcat",
   "license": "MIT",
   "scripts": {
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "pnpm install && pnpm build",
     "setup": "node setup.js",
     "lint": "prettier src test --check",
     "format": "prettier src test --write",
