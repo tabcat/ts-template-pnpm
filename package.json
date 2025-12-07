@@ -17,7 +17,6 @@
   "license": "MIT",
   "scripts": {
     "prepublishOnly": "pnpm install && pnpm build",
-    "setup": "node setup.js",
     "lint": "prettier src test --check",
     "format": "prettier src test --write",
     "build": "tsc",
@@ -33,5 +32,14 @@
   },
   "lint-staged": {
     "*.ts": "prettier --ignore-unknown --write"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "typedoc": "^0.28.15",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
   }
 }

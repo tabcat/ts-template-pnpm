@@ -1,10 +1,8 @@
 # ts-template-pnpm
 
-## Usage
+## Setup
 
-`pnpm run setup`
-
-The script source is at ./setup.js and will move `workflows` into `.github/workflows` and then install the devDeps.
+Run `pnpm up --latest` and move `workflows` into `.github/workflows`.
 
 ### Add NPM_TOKEN to github secrets
 
