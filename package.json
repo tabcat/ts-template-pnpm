@@ -17,8 +17,8 @@
   "license": "MIT",
   "scripts": {
     "prepublishOnly": "pnpm install && pnpm build",
-    "lint": "biome check src test",
-    "format": "biome check --write src test",
+    "lint": "dprint check",
+    "format": "dprint fmt",
     "build": "tsc",
     "test": "vitest --config vitest.config.ts --run",
     "test:watch": "vitest --config vitest.config.ts",
@@ -26,10 +26,10 @@
     "ci": "pnpm build && pnpm lint && pnpm test"
   },
   "lint-staged": {
-    "*.ts": "biome check --write"
+    "*/**": "pnpm run format"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.8",
+    "dprint": "^0.52.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "typedoc": "^0.28.15",
