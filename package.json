@@ -20,8 +20,8 @@
     "lint": "dprint check",
     "format": "dprint fmt",
     "build": "tsc",
-    "test": "vitest --config vitest.config.ts --run",
-    "test:watch": "vitest --config vitest.config.ts",
+    "test": "vitest --dir test --config vitest.config.ts --run",
+    "test:watch": "vitest --dir test --config vitest.config.ts",
     "api-docs": "typedoc src",
     "ci": "pnpm build && pnpm lint && pnpm test"
   },
