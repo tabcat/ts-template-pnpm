@@ -31,9 +31,9 @@
   "devDependencies": {
     "dprint": "^0.52.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
-    "typedoc": "^0.28.15",
+    "lint-staged": "^16.3.2",
+    "typedoc": "^0.28.17",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.15"
+    "vitest": "^4.0.18"
   }
 }
