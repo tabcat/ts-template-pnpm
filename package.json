@@ -16,6 +16,7 @@
   "author": "tabcat",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky",
     "prepublishOnly": "pnpm install && pnpm build",
     "lint": "dprint check",
     "format": "dprint fmt",
