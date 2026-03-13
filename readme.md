@@ -4,9 +4,9 @@
 
 Run `pnpm up --latest` and move `workflows` into `.github/workflows`.
 
-### Add NPM_TOKEN to github secrets
+### Set up Trusted Publishing for NPM
 
-For the publish workflow to work, you need to add your NPM token as a secret to the repository.
+For the publish workflow to work, you need to set up Trusted Publishing on the package settings on npm.
 
 ### Enable Github Pages for Docs
 

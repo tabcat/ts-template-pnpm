@@ -39,5 +39,3 @@ jobs:
       - name: Publish to NPM
         if: steps.check-version.outputs.LOCAL_VERSION != steps.check-version.outputs.PUBLISHED_VERSION
         run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
